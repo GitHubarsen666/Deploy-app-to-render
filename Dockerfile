@@ -9,6 +9,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Копіюємо всі файли
 COPY . .
 
+# Визначення змінної середовища PORT
+ENV PORT 5000
+
 # Експортуємо порт, на якому ваш додаток працює
 EXPOSE 5000
 
