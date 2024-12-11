@@ -78,9 +78,10 @@ def create_app(db_url=None):
 
     return app
 
-# Запуск додатку
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  
-    app.run(host="0.0.0.0", port=port)
+# Виклик create_app з заданим db_url
+app = create_app(db_url="postgresql+pg8000://root:arsen123456!@34.76.108.247:5432/test")
 
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
